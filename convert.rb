@@ -8,4 +8,5 @@ code = convertor.convert(File.read(ARGV[0]))
 
 code.sub!("food_processor",
   '<a href = "http://github.com/robbrit/programmerscookbook/blob/master/images/food_processor.jpg">food_processor</a>')
+code.sub!("pre", 'pre class = "code"')
 puts code

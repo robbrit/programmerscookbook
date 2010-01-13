@@ -1,4 +1,4 @@
-ingredients => {
+ingredients = {
   :spaghetti => 1.package,
   :basil => 4.tbsp,
   :garlic_salt => 2.tsp,

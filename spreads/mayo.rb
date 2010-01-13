@@ -28,6 +28,8 @@ end
 tall_plastic_dish << :all
 
 begin
+  # put the food processor at the bottom with the yolk
+  # and stir _slowly_
   food_processor.stir :very_slowly
 rescue DidNotStirSlowlyException
   me.smack you
