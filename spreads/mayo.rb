@@ -18,7 +18,7 @@ if you.like? :lemon
   ingredients[:lemon_juice] = 2.tbsp
 else
   ingredients[:water] = 1.tbsp
-  ingredients[:white_vinegar] = 1.tbsp
+  ingredients[:lemon_juice] = 1.tbsp
 end
 
 if you.like? :mustard
