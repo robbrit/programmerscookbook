@@ -16,8 +16,8 @@ end
 code = code.split(/\r?\n/)
 
 code[0] = {
-  "mashed_potatoes" => "2010/01/mashed_potatoes.html",
-  "rice" => "2010/01/rice.html"
+  "mashed_potatoes" => "2010/01/mashed-potatoes.html",
+  "white_rice" => "2010/01/white-rice.html"
 }.inject(code[0]) { |old, (word, repl)| old.sub(Regexp.escape(word),
   "<a href = \"http://programmerscookbook.blogspot.com/" + repl + "\">" + word + "</a>") }
 
