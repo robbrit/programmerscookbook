@@ -8,7 +8,7 @@ code = convertor.convert(File.read(ARGV[0]))
 
 %w[potato_masher food_processor].each do |w|
   code.gsub!(w,
-    '<a href = "http://github.com/robbrit/programmerscookbook/blob/master/images/' + w + '">' + w + '</a>')
+    '<a href = "http://github.com/robbrit/programmerscookbook/blob/master/images/' + w + '">' + w + '.jpg</a>')
 end
 
 code.sub!("pre", 'pre class = "code"')
