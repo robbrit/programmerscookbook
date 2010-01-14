@@ -36,9 +36,11 @@ pan.element.set_heat :medium_low
 you.wait 1.minute
 
 while pot.contains? :rice
-  pan << pot.remove(:rice)
+  pan << pot.remove(:rice, :amount => 1.wooden_spoonful)
   you.stir
 end
+
+pan << :vegetables
 
 eggs.each do |egg|
   pan << egg
