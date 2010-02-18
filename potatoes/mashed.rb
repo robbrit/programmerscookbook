@@ -1,5 +1,7 @@
 ingredients = {
-  :potatoes => 6
+  :potatoes => 6,
+  :milk => 1.cup,
+  :butter => 2.tbsp
 }
 
 unless you.like :potato_skins
@@ -24,7 +26,7 @@ end
 you.wait until potatoes.soft?  # usually about 20 minutes
 
 strainer << pot.contents
-pot << strainer.contents
+pot << strainer.contents << :milk << :butter
 
 you.mash :potatoes, :with => (:fork or :potato_masher)
 you.eat
