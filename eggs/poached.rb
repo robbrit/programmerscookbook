@@ -1,14 +1,21 @@
 ingredients = {
-  :eggs => 2
+  :eggs => 2,
+
+  # vinegar helps keep the eggs from coming apart
+  :vinegar => 1.tbsp
 }
 
 pot << :water
 pot.set_heat :high
 
 if pot.boiling?
-  # if you don't put them in gently then the white splatters
-  # and you end up with very stringy whites
-  pot.insert (you.crack :eggs), :very_gently
+  pot << :vinegar
+  pot.set_heat :medium
+end
+
+if pot.simmering?
+  ladle << (you.crack :eggs)
+  pot.submerge ladle
 end
 
 if pot.eggs.cooked?

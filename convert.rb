@@ -15,11 +15,17 @@ end
 # usually for require statements
 code = code.split(/\r?\n/)
 
-code[0] = {
-  "mashed_potatoes" => "2010/01/mashed-potatoes.html",
-  "white_rice" => "2010/01/white-rice.html"
-}.inject(code[0]) { |old, (word, repl)| old.sub(Regexp.escape(word),
-  "<a href = \"http://programmerscookbook.blogspot.com/" + repl + "\">" + word + "</a>") }
+i = 0
+while code[i] =~ /require/
+  code[i] = {
+    "poached_eggs" => "2010/01/poached-eggs.html",
+    "basic_dough" => "2010/02/basic-dough.html",
+    "mashed_potatoes" => "2010/01/mashed-potatoes.html",
+    "white_rice" => "2010/01/white-rice.html"
+  }.inject(code[i]) { |old, (word, repl)| old.sub(Regexp.escape(word),
+    "<a href = \"http://programmerscookbook.blogspot.com/" + repl + "\">" + word + "</a>") }
+  i += 1
+end
 
 code = code.join("\n").sub("pre", 'pre class = "code"')
 puts code
