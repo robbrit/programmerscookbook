@@ -21,6 +21,7 @@ while code[i] =~ /require/
     "poached_eggs" => "2010/01/poached-eggs.html",
     "basic_dough" => "2010/02/basic-dough.html",
     "mashed_potatoes" => "2010/01/mashed-potatoes.html",
+    "kimchi" => "2010/03/kimchi.html",
     "white_rice" => "2010/01/white-rice.html"
   }.inject(code[i]) { |old, (word, repl)| old.sub(Regexp.escape(word),
     "<a href = \"http://programmerscookbook.blogspot.com/" + repl + "\">" + word + "</a>") }
