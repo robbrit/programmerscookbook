@@ -1,0 +1,4 @@
+This is a collection of recipes that are written in Ruby instead of English.
+
+The convert.rb script converts a Ruby file into an HTML file for publishing on the blog here:
+http://programmerscookbook.blogspot.com/
